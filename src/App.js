@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import VideoPlayer from "./Components/VIdeoPlayer/VideoPlayer";
 import YTSearch from "./Components/Search/YTSearch";
+import CreateComment from "./Components/CreateComment/CreateComment";
 
 function App() {
   //  Establish state variables
   const [allComents, setAllComents] = useState([]);
   const [currentVideoID, setCurrentVideoIDComents] = useState("");
   const [YTresults, setYTResults] = useState([]);
-
+  //  Test API data
   const fakeSearchResults = () => {
     setYTResults([
       {
@@ -363,11 +364,21 @@ function App() {
     ]);
   };
 
+  // A function to add comments
+  function AddNewComment(comment) {
+    // temporary variable to hold all the comments.
+    let tempComments = [...allComents, comment];
+
+    // updating the Allcomments state variable
+    setAllComents(tempComments);
+  }
+
   return (
     <div>
       <button onClick={() => fakeSearchResults()}>Test Button</button>
       <YTSearch />
       <VideoPlayer />
+      <CreateComment />
     </div>
   );
 }
