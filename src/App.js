@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import VideoPlayer from "./Components/VIdeoPlayer/VideoPlayer";
 import YTSearch from "./Components/Search/YTSearch";
 import CreateComment from "./Components/CreateComment/CreateComment";
+import CommentList from "./Components/CommentList/CommentList";
 
 function App() {
   //  Establish state variables
@@ -378,7 +379,8 @@ function App() {
       <button onClick={() => fakeSearchResults()}>Test Button</button>
       <YTSearch />
       <VideoPlayer />
-      <CreateComment />
+      <CreateComment AddNewComment={AddNewComment} />
+      <CommentList />
     </div>
   );
 }
