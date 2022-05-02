@@ -3,6 +3,7 @@ import VideoPlayer from "./Components/VIdeoPlayer/VideoPlayer";
 import YTSearch from "./Components/Search/YTSearch";
 import CreateComment from "./Components/CreateComment/CreateComment";
 import CommentList from "./Components/CommentList/CommentList";
+import LikeButton from "./Components/LikeButton/LikeButton";
 
 function App() {
   //  Establish state variables
@@ -384,6 +385,7 @@ function App() {
       <VideoPlayer />
       <CreateComment AddNewComment={AddNewComment} />
       <CommentList AllComments={allComments} />
+      <LikeButton></LikeButton>
     </div>
   );
 }

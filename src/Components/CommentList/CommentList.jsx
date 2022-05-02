@@ -1,4 +1,5 @@
 import Comment from "../Comment/Comment";
+import LikeButton from "../LikeButton/LikeButton";
 
 const CommentList = (props) => {
   return (
