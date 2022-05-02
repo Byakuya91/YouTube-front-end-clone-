@@ -6,9 +6,10 @@ import CommentList from "./Components/CommentList/CommentList";
 
 function App() {
   //  Establish state variables
-  const [allComents, setAllComents] = useState([]);
+  const [allComments, setAllComments] = useState([]);
   const [currentVideoID, setCurrentVideoIDComents] = useState("");
   const [YTresults, setYTResults] = useState([]);
+
   //  Test API data
   const fakeSearchResults = () => {
     setYTResults([
@@ -363,15 +364,16 @@ function App() {
         },
       },
     ]);
+    console.log(setYTResults);
   };
 
   // A function to add comments
   function AddNewComment(comment) {
     // temporary variable to hold all the comments.
-    let tempComments = [...allComents, comment];
+    let tempComments = [...allComments, comment];
 
     // updating the Allcomments state variable
-    setAllComents(tempComments);
+    setAllComments(tempComments);
   }
 
   return (
@@ -380,7 +382,7 @@ function App() {
       <YTSearch />
       <VideoPlayer />
       <CreateComment AddNewComment={AddNewComment} />
-      <CommentList />
+      <CommentList AllComments={allComments} />
     </div>
   );
 }

@@ -1,9 +1,25 @@
 const CommentList = (props) => {
     return (  
-      <p>
-          This is a test of the display.
-      </p>
+       <p>
+          {/*  Displaying all the values stored in AllComments. */}
+         {props.AllComments.map((comment) => {
+           
+            return(
+              <div>
+                <p>{comment.commentText}</p>
+              </div>
+            )
 
+         }
+         
+         
+         
+         ) 
+         
+         }
+
+
+       </p>
 
 
 
