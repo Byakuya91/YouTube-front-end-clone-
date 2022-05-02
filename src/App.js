@@ -370,12 +370,11 @@ function App() {
   };
 
   // A function to add comments
-  function AddNewComment(comment) {
+  function AddNewComment(comments) {
     // temporary variable to hold all the comments.
-    let tempComments = [...allComments, comment];
 
     // updating the Allcomments state variable
-    setAllComments(tempComments);
+    setAllComments(comments);
   }
 
   return (
