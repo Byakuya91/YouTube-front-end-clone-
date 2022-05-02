@@ -10,6 +10,8 @@ function App() {
   const [currentVideoID, setCurrentVideoIDComents] = useState("");
   const [YTresults, setYTResults] = useState([]);
 
+  console.log(YTresults);
+
   //  Test API data
   const fakeSearchResults = () => {
     setYTResults([
@@ -379,7 +381,7 @@ function App() {
   return (
     <div>
       <button onClick={() => fakeSearchResults()}>Test Button</button>
-      <YTSearch />
+      <YTSearch handleYTSearch={setYTResults} />
       <VideoPlayer />
       <CreateComment AddNewComment={AddNewComment} />
       <CommentList AllComments={allComments} />
