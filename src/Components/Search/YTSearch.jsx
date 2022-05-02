@@ -5,7 +5,8 @@ import {API_KEY_ONE} from "../../API_KEYS";
 
 // console.log(API_KEY_ONE);
 
-// State variables for search term
+// A UseEffect that is linked to the button.   
+
 
 const YTSearch = (props) => {
     return (
