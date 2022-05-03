@@ -16,6 +16,7 @@ const LikeButton = ({ commentID, comment, setComment }) => {
     }
   }
 
+  //   TODO list:  figure out
   const likeIncrementor = async (event) => {
     let likedComment = {
       videoID: comment.videoID,
@@ -26,8 +27,9 @@ const LikeButton = ({ commentID, comment, setComment }) => {
       .put(`http://localhost:3007/api/comments/${commentID}`, likedComment)
       .then((res) => {
         setComment(res.data);
-        console.log(res.data);
-      });
+        console.log(comment);
+      })
+      .then((res) => setComment(res.data));
   };
 
   return (

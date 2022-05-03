@@ -383,7 +383,6 @@ function App() {
       <VideoPlayer />
       <CreateComment AddNewComment={AddNewComment} />
       <CommentList AllComments={allComments} />
-      <LikeButton></LikeButton>
     </div>
   );
 }
