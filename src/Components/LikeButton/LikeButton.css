@@ -1,0 +1,24 @@
+.inactive{
+    background-color: gray;
+    
+
+}
+
+/* When the button IS pushed  */
+.active {
+    background-color: blue;
+    color: white;
+
+
+}
+/* When the button IS pushed  */
+/* .dislike{
+    background-color: red;
+    color: white;
+
+
+} */
+
+button:hover {
+    color:coral
+}

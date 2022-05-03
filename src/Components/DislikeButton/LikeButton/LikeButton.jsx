@@ -16,6 +16,7 @@ const LikeButton = ({ commentID, comment, setComment }) => {
     }
   }
 
+  //   TODO list:  figure out
   const likeIncrementor = async (event) => {
     let likedComment = {
       videoID: comment.videoID,

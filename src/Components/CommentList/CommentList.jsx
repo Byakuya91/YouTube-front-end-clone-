@@ -3,12 +3,16 @@ import LikeButton from "../LikeButton/LikeButton";
 
 const CommentList = (props) => {
   return (
-    <p>
+    <ul>
       {/*  Displaying all the values stored in AllComments. */}
       {props.AllComments.map((comment) => {
-        return <Comment comment={comment} />;
+        return (
+          <li key={comment._id}>
+            <Comment comment={comment} />
+          </li>
+        );
       })}
-    </p>
+    </ul>
   );
 };
 

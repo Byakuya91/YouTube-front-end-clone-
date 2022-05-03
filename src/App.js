@@ -372,8 +372,6 @@ function App() {
 
   // A function to add comments
   function AddNewComment(comments) {
-    // temporary variable to hold all the comments.
-
     // updating the Allcomments state variable
     setAllComments(comments);
   }
