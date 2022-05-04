@@ -3,7 +3,6 @@ import VideoPlayer from "./Components/VIdeoPlayer/VideoPlayer";
 import YTSearch from "./Components/Search/YTSearch";
 import CreateComment from "./Components/CreateComment/CreateComment";
 import CommentList from "./Components/CommentList/CommentList";
-import LikeButton from "./Components/LikeButton/LikeButton";
 
 function App() {
   //  Establish state variables
@@ -374,12 +373,13 @@ function App() {
   function AddNewComment(comments) {
     // updating the Allcomments state variable
     setAllComments(comments);
+    // console.log(comments);
   }
 
   return (
     <div>
       <button onClick={() => fakeSearchResults()}>Test Button</button>
-      <YTSearch handleYTSearch={setYTResults} />
+      <YTSearch handleYTSearch={setYTResults} YTresults={YTresults} />
       <VideoPlayer />
       <CreateComment AddNewComment={AddNewComment} />
       <CommentList AllComments={allComments} />
