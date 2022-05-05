@@ -11,8 +11,6 @@ const Comment = (props) => {
   return (
     <div>
       <p>{comment.text}</p>
-      <p>{comment.likes}</p>
-      <p>{comment.dislikes}</p>
       <LikeButton
         commentID={comment._id}
         comment={comment}

@@ -15,16 +15,13 @@ const YTSearch = (props) => {
   async function handleSubmit(event) {
     //  prevent the page from reloading
     event.preventDefault();
-
-    // TODO: grab the videoID, title and the thumbnails
-
+    //  api call
     await axios
       .get(
         `https://www.googleapis.com/youtube/v3/search?q=${searchVideoTerm}&key=${API_KEY_ONE}&part=snippet`
       )
       .then((res) => {
-        props.handleYTSearch(res.data);
-        console.log(props.YTSearch);
+        props.handleYTSearch([res.data]);
       });
   }
 
